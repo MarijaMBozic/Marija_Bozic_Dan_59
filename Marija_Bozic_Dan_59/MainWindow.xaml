@@ -4,9 +4,159 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Marija_Bozic_Dan_59"
+          xmlns:converters="clr-namespace:Marija_Bozic_Dan_59.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Window.Resources>
+        <ResourceDictionary>
+            <converters:BoolToStringVisibilitiConverter x:Key="BoolToStringVisibilitiConverter" />
+            <converters:BoolToIsEnabledConverter x:Key="BoolToIsEnabledConverter" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid  DockPanel.Dock="Top" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!-- Left -->
+        <Button Grid.Row="0" Grid.Column="0" FontSize="60" IsEnabled="{Binding Filde_00.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_15">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_00.IsShown"/>
+                    <Binding Path="Filde_00.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="0" FontSize="60" IsEnabled="{Binding Filde_10.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_10.IsShown"/>
+                    <Binding Path="Filde_10.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="0" FontSize="60" IsEnabled="{Binding Filde_20.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_1">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_20.IsShown"/>
+                    <Binding Path="Filde_20.Name"/>
+                </MultiBinding>
+            </Button.Content>
+          </Button>
+        <Button Grid.Row="3" Grid.Column="0" FontSize="60" IsEnabled="{Binding Filde_30.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_2">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_30.IsShown"/>
+                    <Binding Path="Filde_30.Name"/>
+                </MultiBinding>
+            </Button.Content>            
+        </Button>
+        <!-- Middle-->
+        <Button Grid.Row="0" Grid.Column="1" FontSize="60" IsEnabled="{Binding Filde_01.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_3">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_01.IsShown"/>
+                    <Binding Path="Filde_01.Name"/>
+                </MultiBinding>
+            </Button.Content>            
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1" FontSize="60" IsEnabled="{Binding Filde_11.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_4">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_11.IsShown"/>
+                    <Binding Path="Filde_11.Name"/>
+                </MultiBinding>
+            </Button.Content>           
+        </Button>
+        <Button Grid.Row="2" Grid.Column="1" FontSize="60" IsEnabled="{Binding Filde_21.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_5">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_21.IsShown"/>
+                    <Binding Path="Filde_21.Name"/>
+                </MultiBinding>
+            </Button.Content>            
+        </Button>
+        <Button Grid.Row="3" Grid.Column="1" FontSize="60" IsEnabled="{Binding Filde_31.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_6">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_31.IsShown"/>
+                    <Binding Path="Filde_31.Name"/>
+                </MultiBinding>
+            </Button.Content> 
+        </Button>
+        <!-- Right -->
+        <Button Grid.Row="0" Grid.Column="2" FontSize="60" IsEnabled="{Binding Filde_02.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_7">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_02.IsShown"/>
+                    <Binding Path="Filde_02.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="2" FontSize="60" IsEnabled="{Binding Filde_12.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_8">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_12.IsShown"/>
+                    <Binding Path="Filde_12.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" FontSize="60" IsEnabled="{Binding Filde_22.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_9">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_22.IsShown"/>
+                    <Binding Path="Filde_22.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="2" FontSize="60" IsEnabled="{Binding Filde_32.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_10">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_32.IsShown"/>
+                    <Binding Path="Filde_32.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <!-- More right -->
+        <Button Grid.Row="0" Grid.Column="3" FontSize="60" IsEnabled="{Binding Filde_03.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_11">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_03.IsShown"/>
+                    <Binding Path="Filde_03.Name"/>
+                </MultiBinding>
+            </Button.Content> 
+        </Button>
+        <Button Grid.Row="1" Grid.Column="3" FontSize="60" IsEnabled="{Binding Filde_13.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_12">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_13.IsShown"/>
+                    <Binding Path="Filde_13.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="3" FontSize="60" IsEnabled="{Binding Filde_23.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_13">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_23.IsShown"/>
+                    <Binding Path="Filde_23.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="3" FontSize="60" IsEnabled="{Binding Filde_33.IsMatch, Converter={StaticResource BoolToIsEnabledConverter}}" Click="Button_Click_14">
+            <Button.Content>
+                <MultiBinding Converter="{StaticResource BoolToStringVisibilitiConverter}">
+                    <Binding Path="Filde_33.IsShown"/>
+                    <Binding Path="Filde_33.Name"/>
+                </MultiBinding>
+            </Button.Content>
+        </Button>
     </Grid>
 </Window>
