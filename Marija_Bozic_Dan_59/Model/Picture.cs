@@ -10,8 +10,6 @@ namespace Marija_Bozic_Dan_59.Model
 {
     public class Picture: INotifyPropertyChanged
     {
-        public int PictureId { get; set; }
-        public string NamePath { get; set; }
         public bool isMatch;
         public bool IsMatch
         {

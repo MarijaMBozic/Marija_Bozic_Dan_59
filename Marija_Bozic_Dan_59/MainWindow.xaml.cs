@@ -33,7 +33,7 @@ namespace Marija_Bozic_Dan_59
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             model.CloseAll();
-            model.Filde_10.IsShown = true;           
+            model.Filde_10.IsShown = true;
             model.counter++;           
         }
 
